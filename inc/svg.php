@@ -29,8 +29,13 @@ class SVG implements Service {
 		return 'svg';
 	}
 
+	/**
+	 * Load SVG in footer
+	 */
 	public function footer_icons() {
-		if ( ! file_exists( \get_theme_file_path( '/dist/assets/icons/icons.svg' ) ) ) {
+		$path = apply_filters( 'BEA\Theme\Framework\Services\SVG\icons_path', '/dist/assets/icons/icons.svg' );
+
+		if ( ! file_exists( \get_theme_file_path( $path ) ) ) {
 			if ( defined('WP_DEBUG') && WP_DEBUG == true ) {
 				echo '<!-- No SVG File found -->';
 			}
@@ -38,7 +43,7 @@ class SVG implements Service {
 			return;
 		}
 
-		require_once( \get_theme_file_path( '/dist/assets/icons/icons.svg' ) );
+		require_once( \get_theme_file_path( $path ) );
 	}
 
 	/**
@@ -52,6 +57,8 @@ class SVG implements Service {
 		$classes[] = sprintf( 'icon-%s', $icon_class );
 		$classes   = array_merge( $classes, $additionnal_classes );
 		$classes   = array_map('sanitize_html_class', $classes );
+
+		$classes = apply_filters( 'BEA\Theme\Framework\Services\SVG\icons_classes', $classes );
 
 		return sprintf( '<svg class="%s" aria-hidden="true" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-%s"></use></svg>', implode( ' ', $classes ), $icon_class );
 	}
