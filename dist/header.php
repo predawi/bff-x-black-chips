@@ -2,7 +2,7 @@
 require( dirname( __FILE__ ) . '/functions/_init.php' );
 ?>
 <!doctype html>
-<!--[if IE 9 ]> <html class="no-js ie lte-ie9 ie9" lang="fr"> <![endif]-->
+<!--[if lte IE 9 ]> <html class="no-js ie lte-ie9 ie9" lang="fr"> <![endif]-->
 <!--[if !(IE)]><! -->
 <html class="fonts-loading no-js" lang="fr"><!--<![endif]-->
 	<head>
@@ -84,6 +84,10 @@ require( dirname( __FILE__ ) . '/functions/_init.php' );
 
 		<!-- jQuery from official WordPress Core -->
 		<script type="text/javascript" src="../src/js/vendor_async/jquery.js"></script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+		<script type="text/javascript" src="../src/js/vendor/scrolloverflow.min.js"></script>
 
 	</head>
 	<body class="<?php echo $class; ?>">

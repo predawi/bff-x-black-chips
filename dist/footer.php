@@ -1,5 +1,5 @@
 			</main> <!-- Main content -->
-			<footer class="footer" id="footer" role="contentinfo">
+			<!-- <footer class="footer" id="footer" role="contentinfo">
 				<div class="container">
 					<p>Follow us:</p>
 					<a class="button button--circle" href="https://www.facebook.com/beapi.agency/?ref=bookmarks">
@@ -21,7 +21,7 @@
 						</svg>
 					</a>
 				</div>
-			</footer>
+			</footer> -->
 		</div><!-- Main -->
 
 		<?php require 'icons/icons.svg'; ?>

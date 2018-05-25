@@ -11,6 +11,7 @@ import './src/button-href'
 import './src/select'
 import './src/seo'
 import AccessibilityTests from './src/accessibility-tests'
+import './src/fullpage'
 
 /**
  * LazySizes configuration
