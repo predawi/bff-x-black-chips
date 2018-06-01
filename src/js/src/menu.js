@@ -1,5 +1,6 @@
 import $ from 'jquery'
 import 'superfish'
+import swipeable from 'swipeable'
 
 class Menu {
   constructor() {
@@ -10,6 +11,7 @@ class Menu {
     this.menuClose = document.getElementById('js-menu-close')
     this.buttonContainer = document.getElementById('js-menu-trigger')
     this.activeClass = 'menu-mobile--active'
+    this.handleSwipe = this.handleSwipe.bind(this)
     // Resize breakpoint
     this.resizeBreakpoint = window.matchMedia('(min-width: 1024px)')
   }
@@ -31,6 +33,18 @@ class Menu {
   sfMenuInit() {
     // Sf menu
     $('.sf-menu').superfish()
+  }
+  bindTouch() {
+    if (!this.resizeBreakpoint.matches) {
+      swipeable(document.body, this.handleSwipe)
+    }
+  }
+  handleSwipe(params) {
+    if (params.left) {
+      this.openMenu()
+    } else if (params.right) {
+      this.closeMenu()
+    }
   }
   /**
    * Open menu
@@ -66,3 +80,4 @@ export default Menu
 const menu = new Menu()
 menu.init()
 menu.sfMenuInit()
+menu.bindTouch()
