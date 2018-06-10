@@ -1,5 +1,11 @@
 <?php $class = 'page'; ?>
 <?php include 'header.php'; ?>
+	<div class="hero-me" style="background-image: url(assets/img/bg-sample/elke-karin-lugert-125493-unsplash.jpg)">
+		<span class="hero-me__title">
+			Page default
+		</span>
+	</div>
+	<?php include 'blocks/header.php'; ?>
 	<div class="page__header lazyload" data-bgset="assets/img/bg-sample/bg_img-mobile-01.jpg [(max-width: 1023px)] | assets/img/bg-sample/bg_img-desktop-01.jpg">
 		<div class="container">
 			<h1 class="page__title">Titre de la page par défaut, avec sidebar</h1>

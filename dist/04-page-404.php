@@ -1,5 +1,11 @@
 <?php $class = 'error-404'; ?>
 <?php include 'header.php'; ?>
+	<div class="hero-me" style="background-image: url(assets/img/bg-sample/jon-tyson-533596-unsplash.jpg)">
+        <span class="hero-me__title">
+            Page 404
+        </span>
+    </div>
+	<?php include 'blocks/header.php'; ?>
 	<article class="entry">
 		<div class="container">
 			<h1 class="entry__title">Erreur 404</h1>

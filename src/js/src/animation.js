@@ -1,7 +1,21 @@
 import Barba from 'barba.js'
 
+let lastElementClicked
+
+const openMenu = e => {
+  const me = document.querySelector('.me')
+  me.classList.add('open')
+  document.documentElement.classList.add('me-open')
+}
+
+document.getElementById('open-menu').addEventListener('click', openMenu)
+
 Barba.Pjax.start()
 Barba.Prefetch.init()
+
+Barba.Dispatcher.on('linkClicked', function(el) {
+  lastElementClicked = el
+})
 
 var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
@@ -12,44 +26,34 @@ var FadeTransition = Barba.BaseTransition.extend({
      */
 
     // As soon the loading is finished and the old page is faded out, let's fade the new page
-    Promise.all([this.newContainerLoading, this.fadeOut()]).then(this.fadeIn.bind(this))
+    this.el = lastElementClicked
+    Promise.all([this.newContainerLoading, this.enlargeItems()]).then(this.showNewPage.bind(this))
   },
 
-  fadeOut: function() {
-    /**
-     * this.oldContainer is the HTMLElement of the old Container
-     */
-
-    return $(this.oldContainer)
-      .animate({ opacity: 0 })
-      .promise()
+  enlargeItems: function() {
+    var deferred = Barba.Utils.deferred()
+    const navItems = document.querySelectorAll('.me li')
+    for (let i = 0; i < navItems.length; i++) {
+      const item = navItems[i]
+      if (item !== this.el.parentNode) {
+        item.classList.add('hide')
+      }
+      this.el.parentNode.classList.add('expand')
+    }
+    setTimeout(() => {
+      const me = document.querySelector('.me')
+      me.classList.remove('open')
+      document.documentElement.classList.remove('me-open')
+      window.scroll(0, 0)
+      deferred.resolve()
+    }, 1000)
+    return deferred.promise
   },
 
-  fadeIn: function() {
-    /**
-     * this.newContainer is the HTMLElement of the new Container
-     * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
-     * Please note, newContainer is available just after newContainerLoading is resolved!
-     */
-
-    var _this = this
-    var $el = $(this.newContainer)
-
-    $(this.oldContainer).hide()
-
-    $el.css({
-      visibility: 'visible',
-      opacity: 0,
-    })
-
-    $el.animate({ opacity: 1 }, 400, function() {
-      /**
-       * Do not forget to call .done() as soon your transition is finished!
-       * .done() will automatically remove from the DOM the old Container
-       */
-
-      _this.done()
-    })
+  showNewPage: function() {
+    this.newContainer.style.visibility = 'visible'
+    this.done()
+    document.getElementById('open-menu').addEventListener('click', openMenu)
   },
 })
 

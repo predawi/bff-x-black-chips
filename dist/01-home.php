@@ -1,5 +1,11 @@
 <?php $class = 'home'; ?>
 <?php include 'header.php'; ?>
+	<div class="hero-me" style="background-image: url(assets/img/bg-sample/daniel-roe-30147-unsplash.jpg)">
+		<span class="hero-me__title">
+			Home
+		</span>
+	</div>
+	<?php include 'blocks/header.php'; ?>
 	<article class="entry">
 		<div class="container">
 			<div class="entry__header">
