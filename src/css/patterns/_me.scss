@@ -99,9 +99,11 @@
                 width: 0%;
                 opacity: 0;
                 flex: 0;
+                border: none;
             }
             &.expand {
                 width: 100vw;
+                border: none;
                 .bg {
                     opacity: 1;
                 }
