@@ -100,5 +100,5 @@ require( dirname( __FILE__ ) . '/functions/_init.php' );
 		<div class="cssloading__overlay"></div>
 			<div id="main">
 				<div id="barba-wrapper">
-					<div class="barba-container">
+					<div class="barba-container" data-namespace="<?php echo $namespace; ?>">
 						<main id="main__content" class="main__content" role="main" tabindex="-1" aria-label="Contenu Principal">

@@ -1,4 +1,5 @@
 <?php $class = 'page'; ?>
+<?php $namespace = 'page'; ?>
 <?php include 'header.php'; ?>
 	<div class="hero-me" style="background-image: url(assets/img/bg-sample/elke-karin-lugert-125493-unsplash.jpg)">
 		<span class="hero-me__title">

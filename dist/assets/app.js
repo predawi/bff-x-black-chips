@@ -2856,13 +2856,50 @@ var FadeTransition = __WEBPACK_IMPORTED_MODULE_0_barba_js___default.a.BaseTransi
   showNewPage: function() {
     this.newContainer.style.visibility = 'visible'
     this.done()
-    document.getElementById('open-menu').addEventListener('click', openMenu)
   },
 })
 
 __WEBPACK_IMPORTED_MODULE_0_barba_js___default.a.Pjax.getTransition = function() {
   return FadeTransition
 }
+
+var Homepage = __WEBPACK_IMPORTED_MODULE_0_barba_js___default.a.BaseView.extend({
+  namespace: 'home',
+  onEnter: function() {
+    console.log('View: Home')
+  },
+})
+
+var Page = __WEBPACK_IMPORTED_MODULE_0_barba_js___default.a.BaseView.extend({
+  namespace: 'page',
+  onEnter: function() {
+    console.log('View: Page')
+  },
+})
+
+var Archive = __WEBPACK_IMPORTED_MODULE_0_barba_js___default.a.BaseView.extend({
+  namespace: 'archive',
+  onEnter: function() {
+    console.log('View: Archive')
+  },
+})
+
+var Error404 = __WEBPACK_IMPORTED_MODULE_0_barba_js___default.a.BaseView.extend({
+  namespace: 'error-404',
+  onEnter: function() {
+    console.log('View: Error 404')
+  },
+})
+
+__WEBPACK_IMPORTED_MODULE_0_barba_js___default.a.Dispatcher.on('transitionCompleted', function(el) {
+  document.getElementById('open-menu').addEventListener('click', openMenu)
+})
+
+// Don't forget to init the view!
+Homepage.init()
+Page.init()
+Archive.init()
+Error404.init()
 
 
 /***/ }),

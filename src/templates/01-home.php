@@ -1,4 +1,5 @@
 <?php $class = 'home'; ?>
+<?php $namespace = 'home'; ?>
 <?php include 'header.php'; ?>
 	<div class="hero-me" style="background-image: url(assets/img/bg-sample/daniel-roe-30147-unsplash.jpg)">
 		<span class="hero-me__title">

@@ -1,4 +1,5 @@
 <?php $class = 'error-404'; ?>
+<?php $namespace = 'error-404'; ?>
 <?php include 'header.php'; ?>
 	<div class="hero-me" style="background-image: url(assets/img/bg-sample/jon-tyson-533596-unsplash.jpg)">
         <span class="hero-me__title">

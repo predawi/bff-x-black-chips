@@ -1,4 +1,5 @@
 <?php $class = 'archive'; ?>
+<?php $namespace = 'archive'; ?>
 <?php include 'header.php'; ?>
     <div class="hero-me" style="background-image: url(assets/img/bg-sample/jd-mason-622310-unsplash.jpg)">
         <span class="hero-me__title">

@@ -1858,7 +1858,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   text-align: center;
   background-size: cover;
@@ -1942,9 +1942,11 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
         width: 0%;
         opacity: 0;
         -ms-flex: 0;
-            flex: 0; }
+            flex: 0;
+        border: none; }
       .me ul li.expand {
-        width: 100%; }
+        width: 100vw;
+        border: none; }
         .me ul li.expand .bg {
           opacity: 1; }
       .me ul li:hover, .me ul li:active, .me ul li:focus {

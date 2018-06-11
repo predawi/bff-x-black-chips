@@ -53,10 +53,47 @@ var FadeTransition = Barba.BaseTransition.extend({
   showNewPage: function() {
     this.newContainer.style.visibility = 'visible'
     this.done()
-    document.getElementById('open-menu').addEventListener('click', openMenu)
   },
 })
 
 Barba.Pjax.getTransition = function() {
   return FadeTransition
 }
+
+var Homepage = Barba.BaseView.extend({
+  namespace: 'home',
+  onEnter: function() {
+    console.log('View: Home')
+  },
+})
+
+var Page = Barba.BaseView.extend({
+  namespace: 'page',
+  onEnter: function() {
+    console.log('View: Page')
+  },
+})
+
+var Archive = Barba.BaseView.extend({
+  namespace: 'archive',
+  onEnter: function() {
+    console.log('View: Archive')
+  },
+})
+
+var Error404 = Barba.BaseView.extend({
+  namespace: 'error-404',
+  onEnter: function() {
+    console.log('View: Error 404')
+  },
+})
+
+Barba.Dispatcher.on('transitionCompleted', function(el) {
+  document.getElementById('open-menu').addEventListener('click', openMenu)
+})
+
+// Don't forget to init the view!
+Homepage.init()
+Page.init()
+Archive.init()
+Error404.init()
