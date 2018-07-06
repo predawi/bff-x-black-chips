@@ -1853,6 +1853,24 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     .searchform__submit .icon {
       vertical-align: -15%; }
 
+[data-aos] {
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out; }
+
+[data-aos=fade-up] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition-property: opacity, transform; }
+  [data-aos=fade-up].done {
+    opacity: 1;
+    transform: translateY(0); }
+
+[data-aos=fadein] {
+  opacity: 0;
+  transition-property: opacity; }
+  [data-aos=fadein].done {
+    opacity: 1; }
+
 /**
  * Pages
  */

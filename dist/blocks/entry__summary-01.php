@@ -1,5 +1,5 @@
 <!-- Entry summary sample for loop -->
-<article class="entry__item">
+<article class="entry__item" data-aos="fade-up">
 	<div class="entry__media">
 		<?php echo get_the_post_thumbnail( 0, 'thumbnail', array( 'data-location' => 'entry-img-01', 'class' => 'entry__img', 'alt' => '#' ) ); ?>
 	</div>

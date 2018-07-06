@@ -10,6 +10,7 @@ import './src/menu'
 import './src/button-href'
 import './src/select'
 import './src/seo'
+import './src/scrollfire'
 import AccessibilityTests from './src/accessibility-tests'
 
 /**

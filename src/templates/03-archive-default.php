@@ -11,15 +11,15 @@
         <div class="container">
             <h2 class="entry__title">An example of entry list</h2>
             <div class="entry__loop">
-                <?php include 'blocks/entry__summary-01.php' ?>
-                <?php include 'blocks/entry__summary-01.php' ?>
-                <?php include 'blocks/entry__summary-01.php' ?>
+                <?php for ($i=0; $i < 6; $i++) {
+                    include 'blocks/entry__summary-01.php';
+                } ?>
             </div>
             <h2 class="entry__title">An example of entry "card" list</h2>
             <div class="entry__loop">
-                <?php include 'blocks/entry__seo-01.php' ?>
-                <?php include 'blocks/entry__seo-01.php' ?>
-                <?php include 'blocks/entry__seo-01.php' ?>
+                <?php for ($j=0; $j < 6; $j++) {
+                    include 'blocks/entry__seo-01.php';
+                } ?>
             </div>
         </div>
     </div>

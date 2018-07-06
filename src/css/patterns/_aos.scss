@@ -1,0 +1,20 @@
+[data-aos] {
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+[data-aos=fade-up] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition-property: opacity, transform;
+    &.done {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+[data-aos=fadein] {
+    opacity: 0;
+    transition-property: opacity;
+    &.done {
+        opacity: 1;
+    }
+}
