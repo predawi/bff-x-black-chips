@@ -1,11 +1,11 @@
 <?php
 
-namespace BEA\Theme\Framework;
+namespace BEAPI\Theme\Framework;
 
 /**
  * Class Framework
  *
- * @package BEA\Theme\Framework
+ * @package BEAPI\Theme\Framework
  */
 class Framework {
 	/**
@@ -18,19 +18,21 @@ class Framework {
 	 */
 	protected static $services = [
 		// Services
-		\BEA\Theme\Framework\Services\Theme::class,
-		\BEA\Theme\Framework\Services\Assets::class,
-		\BEA\Theme\Framework\Services\Assets_CSS_Async::class,
-		\BEA\Theme\Framework\Services\Assets_JS_Async::class,
-		\BEA\Theme\Framework\Services\SVG::class,
-		\BEA\Theme\Framework\Services\Favicons::class,
-		\BEA\Theme\Framework\Services\Acf::class,
-		\BEA\Theme\Framework\Services\Sidebar::class,
-		\BEA\Theme\Framework\Services\Menu::class,
+		\BEAPI\Theme\Framework\Services\Theme::class,
+//		\BEAPI\Theme\Framework\Services\Assets::class,
+//		\BEAPI\Theme\Framework\Services\Assets_CSS_Async::class,
+//		\BEAPI\Theme\Framework\Services\Assets_JS_Async::class,
+		\BEAPI\Theme\Framework\Services\SVG::class,
+		\BEAPI\Theme\Framework\Services\Favicons::class,
+		\BEAPI\Theme\Framework\Services\Acf::class,
+		\BEAPI\Theme\Framework\Services\Sidebar::class,
+		\BEAPI\Theme\Framework\Services\Menu::class,
+//		\BEAPI\Theme\Framework\Services\FacetWp::class,
+//		\BEAPI\Theme\Framework\Services\SearchWp::class,
 
 		// Services as Tools
-		\BEA\Theme\Framework\Tools\Body_Class::class,
-		\BEA\Theme\Framework\Tools\Template_Parts::class,
+		\BEAPI\Theme\Framework\Tools\Body_Class::class,
+		\BEAPI\Theme\Framework\Tools\Template_Parts::class,
 	];
 
 	/**
