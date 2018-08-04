@@ -11,6 +11,7 @@
     "start": "npm run icons && NODE_ENV=dev node --max_old_space_size=8192 node_modules/.bin/webpack-dev-server --hot --inline --progress --watch --config config/browser-sync.js",
     "build:dev": "npm run clean && NODE_ENV=dev node node_modules/.bin/webpack --config config/webpack.dev.js",
     "build:prod": "npm run clean && node node_modules/.bin/webpack --config config/webpack.prod.js && node tasks/critical-css.js && node tasks/style-version.js",
+    "build:test": "node node_modules/.bin/webpack --config config/webpack.prod.js",
     "build": "npm run clean && NODE_ENV=dev node node_modules/.bin/webpack --config config/webpack.dev.js && node node_modules/.bin/webpack --config config/webpack.prod.js && node tasks/critical-css.js && node tasks/style-version.js",
     "favicon": "node tasks/favicon.js && node tasks/favicon.js --appicon",
     "icons": "node tasks/svg-sprite.js",
@@ -85,6 +86,7 @@
     "jquery": "^3.3.1",
     "jquery.placeholder": "^2.0.7",
     "lazysizes": "^4.0.4",
-    "picturefill": "3.0.2"
+    "picturefill": "3.0.2",
+    "purgecss": "^1.0.0"
   }
 }
