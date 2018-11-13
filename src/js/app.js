@@ -9,6 +9,8 @@ import lazySizesBgset from 'lazysizes/plugins/bgset/ls.bgset'
 
 import './src/ie_message'
 import './src/menu'
+import './src/menu-accordion'
+import './src/menu-drilldown'
 import './src/button-href'
 import './src/select'
 import './src/seo'

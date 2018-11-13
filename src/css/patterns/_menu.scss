@@ -29,7 +29,7 @@
 	left: -100%;
 	bottom: 0;
 	width: 80%;
-	padding: 40px 0;
+	padding: 44px 0;
 	background: $maincolor;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
@@ -70,11 +70,6 @@
 					display: block;
 				}
 			}
-			@include hover {
-				ul {
-					display: block;
-				}
-			}
 			&.sfHover,
 			&.current-menu-item,
 			&.current-menu-parent,
@@ -84,6 +79,11 @@
 					color: $textcolor;
 				}
 			}
+		}
+		&--drilldown {
+			max-width: 100%;
+			position: relative;
+			overflow: hidden;
 		}
 	}
 
@@ -101,12 +101,20 @@
 			#{$parent}__list {
 				display: block;
 			}
+			& > ul {
+				@include breakpoints(md) {
+					display: block;
+				}
+			}
 		}
 	}
 
 	#{$sub-menu} {
+		position: relative;
 		display: none;
-
+		&--visible {
+			display: block;
+		}
 		@include breakpoints(md) {
 			position: absolute;
 			top: 100%;
@@ -121,6 +129,31 @@
 					}
 				}
 			}
+		}
+		#{$sub-menu} {
+			position: absolute;
+			top: 0;
+			left: 100%;
+		}
+	}
+	#{$sub-menu}__toggle {
+		float: right;
+		background: $lightcolor;
+	}
+	#{$sub-menu}--drilldown {
+		// display: block;
+		position: absolute;
+		top: 0;
+		left: 100%;
+		z-index: -1;
+		width: 100%;
+		background: #fefefe;
+		transition: transform 0.15s linear;
+		// transform: translateX(100%);
+		&.active {
+			z-index: 1;
+			display: block;
+			transform: translateX(-100%);
 		}
 	}
 }

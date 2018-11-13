@@ -8,28 +8,34 @@ class Menu {
     this.menuOpen = document.getElementById('js-menu-open')
     this.menuClose = document.getElementById('js-menu-close')
     this.buttonContainer = document.getElementById('js-menu-trigger')
+    // Class
     this.activeClass = 'menu-mobile--active'
     // Resize breakpoint
     this.resizeBreakpoint = window.matchMedia('(min-width: 1024px)')
+    this.openMenu = this.openMenu.bind(this)
+    this.closeMenu = this.closeMenu.bind(this)
+    this.menuResizing = this.menuResizing.bind(this)
+    this.handleOutsideClick = this.handleOutsideClick.bind(this)
   }
   init() {
-    // Events to handle toggle menu
-    this.menuOpen.addEventListener('click', this.openMenu.bind(this), false)
-    this.menuClose.addEventListener('click', this.closeMenu.bind(this), false)
-    // Detect if clicked outside menu
-    document.addEventListener('click', event => {
-      const menu = this.menu.contains(event.target)
-      const buttonContainer = this.buttonContainer.contains(event.target)
-      if (!menu && !buttonContainer) {
-        this.closeMenu()
-      }
-    })
-    // Event breakpoint
-    this.resizeBreakpoint.addListener(this.menuResizing.bind(this))
+    if (!this.menu) {
+      return false
+    }
+    this.menuOpen.addEventListener('click', this.openMenu)
+    this.menuClose.addEventListener('click', this.closeMenu)
+    document.addEventListener('click', this.handleOutsideClick)
+    this.resizeBreakpoint.addListener(this.menuResizing)
   }
-  sfMenuInit() {
-    // Sf menu
-    jQuery('.sf-menu').superfish()
+  /**
+   * Close mobile menu if a click outside of it is detected
+   * @param {event} e
+   */
+  handleOutsideClick(e) {
+    const menu = this.menu.contains(e.target)
+    const buttonContainer = this.buttonContainer.contains(e.target)
+    if (!menu && !buttonContainer) {
+      this.closeMenu()
+    }
   }
   /**
    * Open menu
@@ -51,7 +57,7 @@ class Menu {
   }
   /**
    * Remove menu-mobile active class if breakpoint reach desktop
-   * @param {*} mediaQuery
+   * @param {Object} mediaQuery
    */
   menuResizing(mediaQuery = this.resizeBreakpoint) {
     if (mediaQuery.matches && this.menuBody.classList) {
@@ -63,5 +69,6 @@ class Menu {
 export default Menu
 
 const menu = new Menu()
-menu.init()
-menu.sfMenuInit()
+if (document.body.classList.contains('home')) {
+  menu.init()
+}
