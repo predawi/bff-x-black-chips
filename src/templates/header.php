@@ -96,5 +96,5 @@ require( dirname( __FILE__ ) . '/functions/_init.php' );
 		<![endif]-->
 		<div class="cssloading__overlay"></div>
 		<div id="main">
-			<?php include './blocks/header.php'; ?>
+			<?php include './blocks/header/header.php'; ?>
 			<main id="main__content" class="main__content" role="main" tabindex="-1" aria-label="Contenu Principal">
