@@ -131,9 +131,11 @@
 			}
 		}
 		#{$sub-menu} {
-			position: absolute;
-			top: 0;
-			left: 100%;
+			@include breakpoints(md) {
+				position: absolute;
+				top: 0;
+				left: 100%;
+			}
 		}
 	}
 	#{$sub-menu}__toggle {

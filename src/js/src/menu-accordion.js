@@ -60,6 +60,7 @@ class MenuAccordion extends Menu {
    * @param {Event} e
    */
   toggleSubMenu(e) {
+    console.log(e)
     e.preventDefault()
     const target = e.currentTarget
     const parent = target.parentNode

@@ -9,15 +9,15 @@
     <div class="container">
         <h2>An example of entry list</h2>
         <div class="entry__loop">
-            <?php include 'blocks/entry__summary-01.php' ?>
-            <?php include 'blocks/entry__summary-01.php' ?>
-            <?php include 'blocks/entry__summary-01.php' ?>
+            <?php include 'blocks/entries/entry__summary-01.php' ?>
+            <?php include 'blocks/entries/entry__summary-01.php' ?>
+            <?php include 'blocks/entries/entry__summary-01.php' ?>
         </div>
         <h2>An example of entry "card" list</h2>
         <div class="entry__loop">
-            <?php include 'blocks/entry__seo-01.php' ?>
-            <?php include 'blocks/entry__seo-01.php' ?>
-            <?php include 'blocks/entry__seo-01.php' ?>
+            <?php include 'blocks/entries/entry__seo-01.php' ?>
+            <?php include 'blocks/entries/entry__seo-01.php' ?>
+            <?php include 'blocks/entries/entry__seo-01.php' ?>
         </div>
     </div>
 <?php include 'footer.php'; ?>
