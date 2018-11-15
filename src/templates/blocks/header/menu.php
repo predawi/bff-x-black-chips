@@ -1,5 +1,5 @@
 <nav id="menu" class="menu" role="navigation" tabindex="-1" aria-label="Navigation Principal">
-    <ul class="menu__list sf-menu">
+    <ul class="menu__list">
         <li class="menu-item current-menu-item menu-item-has-children">
             <a href="01-home.php">Home</a>
             <ul class="sub-menu">
@@ -42,7 +42,7 @@
                 </li>
             </ul>
         </li>
-        <li class="menu-item">
+        <li class="menu-item menu-item-has-children">
             <a href="02-page-default.php">Page default</a>
             <ul class="sub-menu">
                 <li class="menu-item menu-item-has-children">
