@@ -7,7 +7,7 @@
  * Load Susy with includePaths in tasks/sass.js
  * http://susydocs.oddbird.net/en/latest/
  */
-@import "root/susy/sass/susy";
+@import "~susy/sass/susy";
 
 @import "root/mixins";
 @import "root/functions";
