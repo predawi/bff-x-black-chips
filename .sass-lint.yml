@@ -1,6 +1,6 @@
 files:
   include: 'src/css/**/*.s+(a|c)ss'
-  ignore: 'nodes_modules/**/*.s+(a|c)ss'
+  ignore: 'node_modules/'
 rules:
   # Consistency Rules
   extends-before-mixins: 1

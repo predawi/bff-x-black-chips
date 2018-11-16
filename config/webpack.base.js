@@ -109,6 +109,7 @@ let webpackBase = {
     new SassLintPlugin({
       configFile: '.sass-lint.yml',
       failOnError: false,
+      ignoreFiles: ['node_modules'],
     }),
   ],
 }
