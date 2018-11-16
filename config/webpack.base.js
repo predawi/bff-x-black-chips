@@ -38,7 +38,7 @@ let webpackBase = {
         }),
       },
       {
-        test: /\s[a|c]ss$/,
+        test: /\.(sass|scss)$/,
         use: ExtractTextPlugin.extract({
           use: [...cssLoaders, 'sass-loader', 'sasslint-loader'],
         }),
