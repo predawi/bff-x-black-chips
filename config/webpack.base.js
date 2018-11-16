@@ -1,8 +1,7 @@
-const path = require('path')
 const config = require('./config')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const SvgStore = require('webpack-svgstore-plugin')
+const SassLintPlugin = require('sasslint-webpack-plugin')
 const cssLoaders = require('./css-loader.js')
 
 let webpackBase = {
@@ -40,7 +39,7 @@ let webpackBase = {
       {
         test: /\.(sass|scss)$/,
         use: ExtractTextPlugin.extract({
-          use: [...cssLoaders, 'sass-loader', 'sasslint-loader'],
+          use: [...cssLoaders, 'sass-loader'],
         }),
       },
       {
@@ -107,22 +106,10 @@ let webpackBase = {
         to: 'img/sample/',
       },
     ]),
-    new SvgStore(
-      path.resolve(__dirname, './../src/img/icons/*.svg'),
-      path.resolve(__dirname, './../dist/assets/img/icons/'),
-      {
-        name: 'icons',
-        prefix: 'icon-',
-        chunk: 'svg',
-        svgoOptions: {
-          plugins: [
-            {
-              removeTitle: true,
-            },
-          ],
-        },
-      }
-    ),
+    new SassLintPlugin({
+      configFile: '.sass-lint.yml',
+      failOnError: false,
+    }),
   ],
 }
 
