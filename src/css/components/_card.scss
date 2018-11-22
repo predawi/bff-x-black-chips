@@ -1,0 +1,74 @@
+@mixin card($flexDirection: column) {
+    display: flex;
+    border: $base-border;
+    flex-direction: $flexDirection;
+
+    @if ($flexDirection == row) {
+        flex-direction: column;
+
+        @include breakpoints(sm) {
+            flex-direction: $flexDirection;
+        }
+
+        .card__thumbnail,
+        .card__content {
+            flex-basis: 50%;
+        }
+
+        .card__img {
+            margin: 0;
+        }
+    }
+
+    @if ($flexDirection == row-reverse) {
+        flex-direction: column-reverse;
+
+        @include breakpoints(sm) {
+            flex-direction: $flexDirection;
+        }
+
+        .card__thumbnail,
+        .card__content {
+            flex-basis: 50%;
+        }
+
+        .card__img {
+            margin: 0 0 0 auto;
+        }
+    }
+}
+
+.card {
+    $parent: &;
+
+    @include card;
+
+    #{$parent}__img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #{$parent}__content {
+        padding: $half-base-spacing;
+    }
+
+    // Vertical card reversed
+    &--reverse {
+        @include card(column-reverse);
+    }
+
+    // Horizontal card
+    &--row {
+        @include card(row);
+
+        &#{$parent}--center {
+            align-items: center;
+        }
+
+        // Horizontal card reversed
+        &#{$parent}--reverse {
+            @include card(row-reverse);
+        }
+    }
+}
