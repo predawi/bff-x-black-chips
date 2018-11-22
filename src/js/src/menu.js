@@ -14,6 +14,7 @@ class Menu {
   }
   init() {
     // Events to handle toggle menu
+    this.menu.classList.add('js-menu')
     this.menuOpen.addEventListener('click', this.openMenu.bind(this), false)
     this.menuClose.addEventListener('click', this.closeMenu.bind(this), false)
     // Detect if clicked outside menu
@@ -64,4 +65,4 @@ export default Menu
 
 const menu = new Menu()
 menu.init()
-menu.sfMenuInit()
+// menu.sfMenuInit()

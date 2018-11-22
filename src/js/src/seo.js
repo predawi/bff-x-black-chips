@@ -6,13 +6,13 @@
 import '../polyfill/forEach'
 
 class SeoLink {
-  /**
-   * Spread link of a content to his top level element
-   * @param {string} selector
-   */
-  static bind(selector) {
-    ;[].forEach.call(document.querySelectorAll(selector), element => new SeoLink(element))
-  }
+  // /**
+  //  * Spread link of a content to his top level element
+  //  * @param {string} selector
+  //  */
+  // static bind(selector) {
+  //   ;[].forEach.call(document.querySelectorAll(selector), element => new SeoLink(element))
+  // }
 
   /**
    * @param {HTMLElement} element
@@ -21,10 +21,12 @@ class SeoLink {
     this.element = element
     this.setupTimer = this.setupTimer.bind(this)
     this.handleClick = this.handleClick.bind(this)
+  }
+
+  init() {
     this.element.addEventListener('mousedown', this.setupTimer, false)
     this.element.addEventListener('mouseup', this.handleClick, false)
   }
-
   /**
    * Start timer to prevent long press
    * @param {Event} e
@@ -57,7 +59,9 @@ class SeoLink {
     }
   }
 }
+;[].forEach.call(document.querySelectorAll('[data-seo]'), element => {
+  const link = new SeoLink(element)
+  link.init()
+})
 
 export default SeoLink
-
-SeoLink.bind('[data-seo]')
