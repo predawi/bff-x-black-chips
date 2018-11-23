@@ -38,5 +38,13 @@
 			}
 		</script>
 		<script src="assets/app.js" async defer></script>
+		<script src="assets/js/vendor_async/upup.min.js"></script>
+		<script>
+			UpUp.start({
+				'content-url': 'offline/offline.html',
+				'assets': ['offline/data.json',  'assets/offline.css'],
+				'service-worker-url': 'upup.sw.min.js'
+			});
+		</script>
 	</body>
 </html>

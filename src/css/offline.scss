@@ -1,0 +1,42 @@
+/**
+ * Main sass config files
+ */
+ @import "root/url-config";
+
+ /**
+  * Load Susy with includePaths in tasks/sass.js
+  * http://susydocs.oddbird.net/en/latest/
+  */
+ @import "root/mixins";
+ @import "root/functions";
+ @import "root/variables";
+ /**
+  * Root styles
+  * @font-face first !
+  */
+ @import "root/normalize";
+ @import "root/box-sizing";
+
+ body {
+     background: $maincolor;
+     height: 100vh;
+ }
+
+ .offline {
+    &__content {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        text-align: center;
+        h1 {
+            margin: 0 0 5px 0;
+            text-transform: uppercase;
+        }
+    }
+ }
+
+#offline {
+    width: 200px;
+    margin: 30px auto 0;
+}
