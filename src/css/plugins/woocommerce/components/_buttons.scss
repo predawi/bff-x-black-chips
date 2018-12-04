@@ -1,0 +1,21 @@
+.woocommerce {
+    .button,
+    a.button,
+    a.button.alt,
+    button.button,
+    button.button.alt,
+    input.button
+    input.button.alt {
+        @include button;
+        @include button--round;
+        &:disabled,
+        &.disabled,
+        &:disabled[disabled] {
+            background-color: $maincolor;
+            @include hover {
+                background-color: $maincolor;
+                transform: none;
+            }
+        }
+    }
+}

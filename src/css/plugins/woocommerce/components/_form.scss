@@ -1,0 +1,10 @@
+.woocommerce {
+    form {
+        .form-row {
+            label,
+            .required {
+                color: $textcolor;
+            }
+        }
+    }
+}

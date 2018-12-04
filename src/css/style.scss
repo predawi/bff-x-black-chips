@@ -41,7 +41,11 @@
 /**
  * Plugins for WordPress plugin custom css (Mailpoet, WPForms etc.)
  */
-//@import "plugin/pluginname";
+/* WooCommerce Components */
+@import "plugins/woocommerce/components/form";
+@import "plugins/woocommerce/components/buttons";
+/* WooCommerce Pages */
+// @import "plugins/woocommerce/pages/login";
 
 /**
  * Patterns
