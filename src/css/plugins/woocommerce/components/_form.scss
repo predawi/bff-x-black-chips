@@ -1,9 +1,22 @@
 .woocommerce {
     form {
         .form-row {
-            label,
-            .required {
+            label {
                 color: $textcolor;
+            }
+            .required {
+                color: $errorcolor-1;
+            }
+        }
+
+        fieldset {
+            margin-top: 20px;
+            &:first-child {
+                margin-top: 0;
+            }
+            legend {
+                padding: 0 10px;
+                font-weight: bold;
             }
         }
     }

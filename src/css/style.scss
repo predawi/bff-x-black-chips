@@ -44,8 +44,14 @@
 /* WooCommerce Components */
 @import "plugins/woocommerce/components/form";
 @import "plugins/woocommerce/components/buttons";
+@import "plugins/woocommerce/components/messages";
+@import "plugins/woocommerce/components/table";
+/* WooCommerce Patterns */
+@import "plugins/woocommerce/patterns/global";
+@import "plugins/woocommerce/patterns/mini-cart";
+@import "plugins/woocommerce/patterns/customer-details";
 /* WooCommerce Pages */
-// @import "plugins/woocommerce/pages/login";
+@import "plugins/woocommerce/pages/cart";
 
 /**
  * Patterns

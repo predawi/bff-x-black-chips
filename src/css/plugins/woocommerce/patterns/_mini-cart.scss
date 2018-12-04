@@ -1,0 +1,10 @@
+.woocommerce {
+    .widget_shopping_cart,
+    &.widget_shopping_cart {
+        .total {
+            padding: 15px 0 0;
+            border-top-width: 1px;
+            border-top-style: solid;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.woocommerce-cart {
+    table {
+        &.cart {
+            td.actions {
+                .coupon {
+                    .input-text {
+                        padding: 8px;
+                    }
+                }
+            }
+        }
+    }
+}

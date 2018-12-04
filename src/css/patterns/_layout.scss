@@ -10,7 +10,7 @@
 }
 .content {
 	@include breakpoints(md) {
-		@include span(9);
+		// @include span(9);
 	}
 }
 .sidebar {

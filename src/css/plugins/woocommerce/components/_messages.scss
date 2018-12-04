@@ -1,0 +1,15 @@
+.woocommerce {
+    &-info,
+    &-message {
+        border-top-color: $successcolor-1;
+        &:before {
+            color: $successcolor-1;
+        }
+    }
+    &-error {
+        border-top-color: $errorcolor-1;
+        &:before {
+            color: $errorcolor-1;
+        }
+    }
+}

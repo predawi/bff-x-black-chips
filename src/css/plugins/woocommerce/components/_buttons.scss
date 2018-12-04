@@ -7,7 +7,6 @@
     input.button
     input.button.alt {
         @include button;
-        @include button--round;
         &:disabled,
         &.disabled,
         &:disabled[disabled] {
@@ -15,6 +14,16 @@
             @include hover {
                 background-color: $maincolor;
                 transform: none;
+            }
+        }
+    }
+
+    .woocommerce-notices-wrapper {
+        .woocommerce-message {
+            .button {
+                background-color: $successcolor-1;
+                border-color: $successcolor-1;
+                color: $lightcolor;
             }
         }
     }
