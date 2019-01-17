@@ -8,7 +8,7 @@
 		<meta name="viewport" content="initial-scale=1.0" />
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-		<title>BeAPI FrontEnd Framework | The WordPress BFF</title>
+		<title>BFF x Black Chips</title>
 
 		<!-- Web App favicons from /assets/img/favicons/index_hd.html -->
 		<link rel="manifest" href="assets/img/favicons/manifest.json">
