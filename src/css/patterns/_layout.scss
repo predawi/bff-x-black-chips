@@ -10,6 +10,16 @@
 	@include container;
 	@include breakpoints(md) {
 		padding: 0;
+		&--small {
+			@include with-layout($susy-small) {
+				@include container;
+			}
+		}
+		&--large {
+			@include with-layout($susy-large) {
+				@include container;
+			}
+		}
 	}
 }
 .content {

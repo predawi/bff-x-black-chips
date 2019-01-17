@@ -10,3 +10,20 @@
 	gutters: 20px/60px,
 	container: 960px
 );
+
+$susy-small:(
+	global-box-sizing: border-box,
+	gutter-position: inside-static,
+	columns: 12,
+	column-width: 60px,
+	gutters: 20px/60px,
+	container: 720px
+);
+$susy-large:(
+	global-box-sizing: border-box,
+	gutter-position: inside-static,
+	columns: 12,
+	column-width: 60px,
+	gutters: 20px/60px,
+	container: 1080px
+);
