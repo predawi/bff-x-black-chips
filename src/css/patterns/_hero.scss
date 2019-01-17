@@ -18,6 +18,7 @@
     @include row__fullwidth;
     padding: $base-spacing 0;
     margin-bottom: $base-spacing;
+    color: $lightcolor;
     @include breakpoints(md) {
         padding: 100px 0;
     }
