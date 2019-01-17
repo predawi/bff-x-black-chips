@@ -1,7 +1,8 @@
 <!-- Entry summary sample for loop -->
 <article class="entry__card" data-seo>
 	<div class="entry__media">
-		<?php echo get_the_post_thumbnail( 0, 'thumbnail', array( 'data-location' => 'entry-img-01', 'class' => 'entry__img', 'alt' => '#' ) ); ?>
+		<?php // echo get_the_post_thumbnail( 0, 'thumbnail', array( 'data-location' => 'entry-img-01', 'class' => 'entry__img', 'alt' => '#' ) ); ?>
+		<img src="assets/img/sample/beasample-01.jpg" alt="" class="entry__img">
 	</div>
 	<div class="entry__summary">
 		<h2 class="entry__title">
