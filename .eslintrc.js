@@ -22,6 +22,7 @@ module.exports = {
   ],
   "globals": {
     "jQuery": true,
-    "$": true
+    "$": true,
+    "matchMedia": true
   }
 };
