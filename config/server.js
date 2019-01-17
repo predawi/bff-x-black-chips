@@ -5,7 +5,8 @@ const config = require('./config')
 webpackDev.plugins.push(
   new BrowserSyncPlugin(
     {
-      proxy: 'http://[::1]:' + config.port,
+      // proxy: 'http://[::1]:' + config.port, // Mac OS
+      proxy: 'http://localhost:' + config.port, // Win 10
       files: [
         {
           match: config.refresh,
