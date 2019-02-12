@@ -39,20 +39,17 @@ $all-button-inputs : $all-buttons;
 		color: $textcolor;
 		border-color: darken($maincolor, 5%);
 		background-color: darken($maincolor, 5%);
-		transform: translateY(-1px);
 	}
 	&:focus {
 		outline: none;
 		color: $textcolor;
 		border-color: darken($maincolor, 5%);
 		background-color: darken($maincolor, 5%);
-		transform: translateY(-1px);
 	}
 	&:active {
 		color: $textcolor;
 		border-color: $maincolor;
 		background-color: $maincolor;
-		transform: translateY(1px);
 	}
 }
 
