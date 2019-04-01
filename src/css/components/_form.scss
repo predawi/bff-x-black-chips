@@ -82,6 +82,11 @@ textarea:hover { // Target the :hover pseudo-class
 textarea:focus { // Target the :focus pseudo-class
 	background: darken($lightcolor, 7.5%);
 }
+input[type=submit],
+button[type=submit] {
+	cursor: pointer;
+	appearance: none;
+}
 
 // Label
 label {

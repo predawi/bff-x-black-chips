@@ -184,3 +184,12 @@
     }
     perspective: $perspective;
 }
+
+// Pseudo element augmentation
+@mixin contentAugmentation($position, $width, $height, $background) {
+	content: "";
+	position: $position;
+	width: $width;
+	height: $height;
+	background: $background;
+}

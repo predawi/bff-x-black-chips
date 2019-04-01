@@ -15,6 +15,21 @@
 	width: 1px;
 }
 
+.clear {
+	clear: both;
+}
 .clearfix {
 	@include clearfix;
+}
+
+.mobile-only {
+	@include breakpoints(md) {
+		display: none;
+	}
+}
+.desktop-only {
+	display: none;
+	@include breakpoints(md) {
+		display: block;
+	}
 }

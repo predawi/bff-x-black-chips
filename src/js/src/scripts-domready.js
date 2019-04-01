@@ -1,6 +1,17 @@
 /**
  * Init stuffs
  */
+// import detectIE from './detectIE'
+// import WOW from 'wow.js'
+
+// // Init WOW js
+// new WOW().init()
+// // Get IE or Edge browser version
+// let version = detectIE
+// if (version !== undefined) {
+//   // Init WOW js
+//   new WOW().init()
+// }
 
 document.addEventListener('DOMContentLoaded', () => {
   // Click outside
